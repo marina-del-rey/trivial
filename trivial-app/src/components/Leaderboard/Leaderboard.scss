@@ -1,0 +1,84 @@
+@import "../../styles/constants.scss";
+
+.leaderboard-container {
+    background: white;
+    border-radius: 0.625rem;
+    overflow-x: auto;
+    margin: 15px auto 0; /* top margin */
+    position: relative;
+    max-width: 900px; 
+    animation: fade-in 0.75s;
+
+    @keyframes fade-in {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 100;
+        }
+    }
+
+    table {
+        font-family: $ubuntu-mono;
+        text-align: left;
+        border-collapse: collapse;
+        width: 100%;
+        margin: 0;
+
+        td, th {
+            text-align: left;
+        }
+
+    }
+
+    .pagination-container {
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px; 
+        left: 0;
+        right: 0;
+        z-index: 1;
+        
+        .page-link {
+            color: black;
+        }
+
+        .pagination .active > .page-link, .page-link.active {
+            z-index: 3;
+            color: #fff;
+            background-color: $secondary;
+            border-color: #c4643a; 
+          }
+          
+    }
+
+    h3 {
+        font-family: $main-font;
+        font-size: 45px;
+        text-align: center;
+        transition: box-shadow 0.3s, transform 0.3s; /* transition for animation */
+        cursor: default;
+        color: $accent;
+        padding-top: 15px;
+        padding-bottom: 2.5px;
+    }
+
+}
+
+
+.mascot-photo {
+    @media (max-width: 1450px) {
+        max-width: 20% !important;
+        margin-bottom: -2px;
+        margin-right: 2px;
+    }
+
+    @media (max-width: 700px) {
+        max-width: 150px !important;
+        margin-bottom: -2px;
+        margin-right: 2px;
+    }
+}
+
+

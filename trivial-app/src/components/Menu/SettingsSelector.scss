@@ -1,0 +1,86 @@
+@import "../../styles/constants.scss";
+
+.settings-container {
+  max-width: 350px;
+  margin: 0 auto;
+  padding-bottom: 35px;
+
+  .inputs-container {
+    padding-bottom: 25px;
+    font-family: $ubuntu-mono;
+    font-weight: 400;
+    font-style: normal;
+
+    .amount-form {
+        height: 42px;
+        border-radius: 4px;
+        font-size: 16.5px;
+        border-color: hsl(0, 0%, 80%);
+        margin-bottom: 21px !important;
+        transition: all 100ms;
+        
+
+        .amount-form::placeholder {
+            color: hsl(0, 0%, 50%);
+        }
+
+        &:hover {
+            border-color: hsl(0, 0%, 70%);
+        }
+
+    }
+
+    .select-form {
+      font-size: 16.5px;
+      margin-bottom: 21px !important;
+
+      &:focus {
+        border: none;
+      }
+    }
+  }
+
+  .ready-button-container {
+    text-align: center;
+
+    .ready-button {
+      padding: 0;
+      font-size: 21px;
+      border-radius: 0.15rem;
+      border: none;
+      width: 105px;
+      height: 45px;
+      font-family: $ubuntu-mono;
+      font-weight: 400;
+      font-style: normal;
+      transition: 0.5s;
+      background-image: linear-gradient(
+        to right,
+        #fda139 25%,
+        #e56e28 60%,
+        #e66933 90%,
+        #e55726 100%
+      );
+      background-size: 200% auto;
+      background-color: $disabled;
+
+      &:hover {
+        box-shadow: rgba(177, 185, 189, 0.5) 0px 0px 25px 0px;
+        background-position: right center;
+      }
+
+      &:disabled {
+        background-image: none;
+        background-color: $disabled;
+        cursor: not-allowed;
+        pointer-events: all !important;
+      }
+    }
+  }
+
+}
+
+.invalid-feedback {
+    margin: 0 auto;
+    padding: 0px;
+}

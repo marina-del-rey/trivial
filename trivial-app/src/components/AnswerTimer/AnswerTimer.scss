@@ -1,0 +1,14 @@
+@import "../../styles/constants.scss";
+
+.answer-timer-container {
+    border-bottom: 1px solid $disabled;
+
+    .progress {
+        height: 10px;
+        transition-duration: 1s;
+        width: 0;
+        transition-timing-function: linear;
+        background-color: red;
+    }
+
+}

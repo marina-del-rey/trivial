@@ -1,0 +1,14 @@
+@import "./constants.scss";
+
+body {
+    font-family: monospace;
+    color: $foreground;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0 30px;
+    height: 100vh; // viewport height
+    background-color: #a52a2a !important; 
+
+
+}

@@ -1,0 +1,128 @@
+@import "../../styles/constants.scss";
+
+.score-container {
+    h3 {
+        padding-top: 12.5px;
+        font-family: $main-font;
+        font-size: 60px;
+        text-align: center;
+        margin-bottom: 25px;
+        cursor: default;
+        color: $accent;
+
+        &:hover {
+            -webkit-animation: animate__jackInTheBox 2s;
+            animation: animate__jackInTheBox 2s;
+        }
+    }
+
+    .score-text-container {
+        padding-bottom: 22.5px;
+
+        p {
+            font-size: 17px;
+            font-weight: 500;
+            font-family: $ubuntu-mono;
+            margin: 0 auto;
+
+            span {  
+                padding: 0px;
+                margin: 0 auto;
+                color: $primary;
+                font-size: 20px;
+            }
+        }
+    }
+    
+    .indicator *, .indicator::before {
+        box-sizing: border-box;
+    }
+
+    .indicator {
+        margin-bottom: 37px;
+        position: relative;
+        width: 350px;
+        height: 175px;
+        overflow: hidden;
+        font-family: $ubuntu-mono;
+        font-weight: 800;
+        font-style: normal;
+    }
+
+    .indicator::before,
+    .indicator::after {
+        position: absolute;
+    }
+
+    .indicator::before {
+        content: "";
+        width: inherit;
+        height: inherit;
+        border: 45px solid rgba(211, 211, 211, 0.3);
+        border-bottom: none;
+        border-top-left-radius: 175px;
+        border-top-right-radius: 175px;
+        
+    }
+
+    .indicator span.bar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: inherit;
+        height: inherit;
+        border: 45px solid;
+        border-top: none;
+        border-bottom-left-radius: 175px;
+        border-bottom-right-radius: 175px;
+        transform-origin: 50% 0;
+        transform-style: preserve-3d;
+        backface-visibility: hidden;
+        animation-fill-mode: forwards;
+        animation-duration: 0.75s;
+        animation-timing-function: linear;
+        z-index: 4;
+        border-color: #69cc69;
+        animation-name: rotate-one;
+        width: 100%; 
+    }
+
+    .indicator span.result {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        font-size: 1.75rem;
+        font-weight: bold;
+
+        > span:first-child, 
+        > span:nth-child(2) {
+            display: inline-block; 
+        }
+
+        > span:last-child { 
+            margin-top: -18px;
+            font-size: 1.25rem;
+            display: block; 
+        }
+    }
+      
+    span.result span:nth-child(1) {
+        font-size: 3.1rem;
+    }
+      
+    @keyframes rotate-one {
+        0% {
+                transform: rotate(0);
+            }
+    }
+      
+    @keyframes rotate-on-hover {
+        0% {
+            transform: rotate(0);
+        }
+
+    }
+      
+}
+

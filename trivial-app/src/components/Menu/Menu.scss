@@ -1,0 +1,50 @@
+@import "../../styles/constants.scss";
+
+.menu-container {
+    max-width: 450px;
+    background: white;
+    border-radius: 0.625rem;
+    margin: 0 auto;
+    padding-top: 35px;
+    box-sizing: border-box;
+    position: relative;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* drop shadow */
+    animation: fade-in 0.75s;
+
+    @keyframes fade-in {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 100;
+        }
+    }
+
+    h1 {
+        font-family: $main-font;
+        font-size: 60px;
+        text-align: center;
+        padding-bottom: 20px;
+        transition: box-shadow 0.3s, transform 0.3s; /* transition for animation */
+        cursor: default;
+        color: $accent;
+
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            20% { transform: translateX(-5px); }
+            40% { transform: translateX(5px); }
+            60% { transform: translateX(-5px); }
+            80% { transform: translateX(5px); }
+            100% { transform: translateX(0); }
+        }
+
+        &:hover {
+            transform: translate3d(-2px, 0); /* move up slightly and rotate a bit on hover */
+            animation: shake 0.5s ease;
+        }
+
+    }    
+
+
+}
+
