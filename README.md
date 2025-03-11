@@ -9,8 +9,6 @@ Trivial is a customizable quiz app built with React and Node.js. It allows users
 - Responsive design for all devices.
 
 ## Installation & Setup
-
-### Prerequisites  
 Make sure you have the following installed:  
 - [Node.js](https://nodejs.org/) 
 - [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/) (package manager)
@@ -54,7 +52,7 @@ Replace ```http://localhost:3001``` with a different backend URL if necessary.
 
 
 ## Database Setup (SQLite3)
-Trivial uses an SQLite3 database for storing leaderboard scores. The database file is located in `leaderboard-api/data/leaderboard.db`
+Trivial uses an SQLite3 database for storing leaderboard scores. The database file is located in `leaderboard-api/data/leaderboard.db`\
 If you need to create a new database manually, run:
 ### 1. Install SQLite3
 ```bash
